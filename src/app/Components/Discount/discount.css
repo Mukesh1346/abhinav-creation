@@ -1,0 +1,20 @@
+.DiscountMainSec{
+    background-image: url("/right.webp");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding:70px 0;
+    border: 1px solid rgb(234, 224, 224);
+    border-radius: 10px;
+}
+.DiscountTitlePara1{
+    font-size: 24px;
+    color:cornflowerblue;
+}
+
+
+
+
+
+
+

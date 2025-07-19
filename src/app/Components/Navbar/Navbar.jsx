@@ -4,28 +4,39 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 import Image from 'next/image';
+import './navbar.css';
 
 export default function Navbar() {
   const menuRef = useRef(null);
+  let hideTimeout = null;
 
   const showMenu = () => {
-    gsap.to(menuRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.4,
-      display: 'block',
-      ease: 'power2.out',
-    });
+    clearTimeout(hideTimeout);
+    if (menuRef.current) {
+      menuRef.current.style.display = 'block';
+      gsap.to(menuRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: 'power2.out',
+      });
+    }
   };
 
   const hideMenu = () => {
-    gsap.to(menuRef.current, {
-      opacity: 0,
-      y: 20,
-      duration: 0.3,
-      display: 'none',
-      ease: 'power2.in',
-    });
+    hideTimeout = setTimeout(() => {
+      if (menuRef.current) {
+        gsap.to(menuRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.3,
+          ease: 'power2.in',
+          onComplete: () => {
+            menuRef.current.style.display = 'none';
+          },
+        });
+      }
+    }, 200);
   };
 
   useEffect(() => {
@@ -62,23 +73,25 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link href="/about" className="nav-link nav-hover">Lehenga</Link>
-            </li>
-               
-            <li className="nav-item">
-              <Link href="/about" className="nav-link nav-hover">Suit</Link>
+              <Link href="/" className="nav-link nav-hover">Lehenga</Link>
             </li>
 
             <li className="nav-item">
-              <Link href="/about" className="nav-link nav-hover">Kurti</Link>
+              <Link href="/" className="nav-link nav-hover">Suit</Link>
             </li>
+
             <li className="nav-item">
-              <Link href="/about" className="nav-link nav-hover">Dupatta</Link>
+              <Link href="/" className="nav-link nav-hover">Kurti</Link>
             </li>
+
             <li className="nav-item">
-              <Link href="/about" className="nav-link nav-hover">Petticoat</Link>
+              <Link href="/" className="nav-link nav-hover">Dupatta</Link>
             </li>
-            
+
+            <li className="nav-item">
+              <Link href="/" className="nav-link nav-hover">Petticoat</Link>
+            </li>
+
             {/* Shop Dropdown */}
             <li
               className="nav-item dropdown position-relative shop-dropdown"
@@ -93,7 +106,7 @@ export default function Navbar() {
                   <div className="col-6 col-md-3">
                     <h6 className="fw-bold mb-2">Men</h6>
                     <ul className="list-unstyled">
-                      <li><Link href="/shop/men/tshirts" className="dropdown-link">T-Shirts</Link></li>
+                      <li><Link href="/Pages/Shop" className="dropdown-link">T-Shirts</Link></li>
                       <li><Link href="/shop/men/jeans" className="dropdown-link">Jeans</Link></li>
                       <li><Link href="/shop/men/jackets" className="dropdown-link">Jackets</Link></li>
                     </ul>
