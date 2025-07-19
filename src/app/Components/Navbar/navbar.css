@@ -1,0 +1,53 @@
+/* Smooth dropdown animation */
+.fashion-dropdown {
+    background: #3acaff;
+    border-radius: 12px;
+    /* min-width: 720px; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .fashion-dropdown{
+    width: 500px !important;
+  }
+  
+  .dropdown-link {
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    color: #333;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  
+  .dropdown-link:hover {
+    color: #e91e63;
+    font-weight: 500;
+  }
+  
+  .nav-hover {
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-hover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e91e63;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-hover:hover::after {
+    width: 100%;
+  }
+  

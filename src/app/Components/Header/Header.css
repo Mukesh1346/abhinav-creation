@@ -1,0 +1,34 @@
+/* components/Header.module.css */
+
+.bgText {
+    font-size: 100px;
+    font-weight: 900;
+    color: #e1dede;
+    line-height: 0.85;
+    z-index: 1;
+    position: relative;
+  }
+  .HeaderRightSec{
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+height:400px;
+  }
+.HeaderMainTitle{
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.HeaderMainSubtitle{
+  color: rgb(46, 137, 202);
+  font-size: 30px;
+  font-weight: 600;
+}
+  .overlayImg {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
