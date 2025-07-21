@@ -1,0 +1,184 @@
+$dark-blue: #31353d;
+$green: #9bb6aa;
+
+.main {
+  background: url('/main-bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.productsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.product {
+  background: #fff;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  border-radius: 12px;
+
+  &:hover {
+    transform: translateY(-25px);
+
+    .productSidebar {
+      right: 0;
+    }
+  }
+
+  figure {
+    margin: 0;
+    line-height: 0;
+  }
+
+  .productImage {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .productDescription {
+    background: #fff;
+    display: flex;
+    padding: 15px;
+
+    .info {
+      flex: 3;
+      color: #aaa;
+
+      h1 {
+        font-size: 18px;
+        margin: 0 0 5px;
+        color: $dark-blue;
+      }
+
+      p {
+        font-size: 0.85em;
+        line-height: 1.3em;
+        margin-bottom: 0;
+      }
+    }
+
+    .fixedLIneheight {
+  line-height: 1.5;           /* fixed line height */
+  max-height: 150px;          /* set max height */
+  overflow-y: auto;           /* scroll vertically if content exceeds */
+  padding: 10px;              /* optional padding */
+  // border: 1px solid #ccc;
+      /* optional styling */
+}
+.fixedLIneheight::-webkit-scrollbar {
+  display: none;
+}
+
+    .price {
+      flex: 1;
+      color: $green;
+      font-size: 2em;
+      position: relative;
+      margin-top: 10px;
+      text-align: right;
+
+      &::before {
+        content: '$';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        font-size: 0.35em;
+      }
+    }
+  }
+
+  .productSidebar {
+    background: $dark-blue;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: -70px;
+    z-index: 10;
+    transition: right 0.3s ease;
+    border-radius: 0 2px 2px 0;
+    overflow: hidden;
+
+    button {
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      color: #fff;
+      padding: 0.9em;
+      font-size: 0.8em;
+      width: 50px;
+      height: 50px;
+      transition: all 0.4s ease;
+      background-position: 15px center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      text-align: left;
+
+      span {
+        opacity: 0;
+        margin-left: 30px;
+        white-space: nowrap;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        width: 130px;
+        background-color: $green;
+
+        span {
+          opacity: 1;
+        }
+      }
+    }
+
+    .buy { background-image: url('/youtube.png');
+         background-size: 70%;
+    }
+    .infoBtn { 
+      background-image: url('/whatsapp.png'); 
+      background-size: 70%;
+
+    }
+    .size   { background-image: url('/gmail.png');
+      background-size: 70%;
+    }
+    .colors {
+      background-image: url('/icons/colors.png');
+
+      span {
+        display: flex;
+        gap: 5px;
+        margin-left: 40px;
+        align-items: center;
+      }
+
+      &:hover {
+        width: 130px;
+      }
+
+      .color {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+
+        &.black { background: #000; border-color: #555; }
+        &.white { background: #fff; border-color: #e5e5e5; }
+        &.red   { background: #EA1535; border-color: #EF566D; }
+      }
+    }
+  }
+}

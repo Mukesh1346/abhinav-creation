@@ -1,0 +1,59 @@
+.bgText {
+  font-size: 100px;
+  font-weight: 900;
+  color: #e1dede;
+  line-height: 0.85;
+  z-index: 1;
+  position: relative;
+  animation: fadeInText 1s ease-in forwards;
+}
+
+.overlayImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  animation: dropIn 1.2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -200px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.HeaderRightSec {
+  text-align: left;
+  height: 400px;
+}
+
+.HeaderMainTitle {
+  line-height: 0.8;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.HeaderMainSubtitle {
+  color: rgb(46, 137, 202);
+  font-size: 40px;
+  font-weight: 600;
+}
