@@ -19,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,7 +29,32 @@ body {
   padding: 0;
   margin: 0;
 }
+body {
+  font-family: var(--font-montserrat), sans-serif;
+}
+/* For regular Montserrat */
+.montserrat-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Change to 100–900 as needed */
+  font-style: normal;
+}
+p{ font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Change to 100–900 as needed */
+  font-style: normal;}
 
+/* For italic Montserrat */
+.montserrat-italic {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+/* or specific class */
+.roboto-text {
+  font-family: var(--font-roboto), sans-serif;
+}
 a {
   color: inherit;
   text-decoration: none;
