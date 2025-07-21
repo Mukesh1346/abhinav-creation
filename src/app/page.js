@@ -5,16 +5,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Components/Header/Header";
 import Discount from "./Components/Discount/Discount";
 import ProductPage from "./Components/Products/Products";
+import Unique from "@/app/Components/Unique/page";
+import LatestProducts from "./Components/LatestProducts/Latestproduct";
+import Testimonial from "./Components/Testimonial/Testimonial";
 
 
 export default function Home() {
   return (
     <>
     <Header/>
-    <Discount/>
     <ProductPage/>
-         
-    
+    <Discount/>
+    <Unique/>
+    <LatestProducts/>  
+     <Testimonial/>
     </>
   );
 }

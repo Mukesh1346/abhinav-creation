@@ -47,7 +47,8 @@ export default function Header() {
                 <div className="mt-2">
                   <Image src="/instagram.png" className="me-2" alt="insta" width={30} height={30} />
                   <Image src="/twitter.png" className="me-2" alt="twitter" width={30} height={30} />
-                  <Image src="/instagram.png" className="me-2" alt="insta" width={30} height={30} />
+                  <Image src="/youtube.png" className="me-2" alt="insta" width={30} height={30} />
+                  <Image src="/logo.png" className="me-2" alt="insta" width={40} height={30} />
                 </div>
               </div>
             </div>

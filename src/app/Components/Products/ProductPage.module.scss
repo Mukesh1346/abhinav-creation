@@ -39,7 +39,7 @@ $green: #9bb6aa;
 
   .productImage {
     width: 100%;
-    height: 200px;
+    height: 300px;
     border-radius: 12px 12px 0 0;
   }
 
@@ -64,6 +64,18 @@ $green: #9bb6aa;
         margin-bottom: 0;
       }
     }
+
+    .fixedLIneheight {
+  line-height: 1.5;           /* fixed line height */
+  max-height: 150px;          /* set max height */
+  overflow-y: auto;           /* scroll vertically if content exceeds */
+  padding: 10px;              /* optional padding */
+  // border: 1px solid #ccc;
+      /* optional styling */
+}
+.fixedLIneheight::-webkit-scrollbar {
+  display: none;
+}
 
     .price {
       flex: 1;
