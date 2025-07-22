@@ -8,10 +8,26 @@
     border-radius: 10px;
 }
 .DiscountTitlePara1{
-    font-size: 24px;
+    font-size: 20px;
     color:cornflowerblue;
 }
 
+@media (max-width: 768px) {
+    .DiscountMainSec {
+        background-image: url(/right.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid #eae0e0;
+        border-radius: 10px;
+        padding: 70px 0;
+    }
+   .DiscountTitlePara1{
+    color:black;
+    font-weight: 600;
+   }
+
+}
 
 
 

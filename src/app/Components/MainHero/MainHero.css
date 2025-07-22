@@ -25,3 +25,13 @@
   transition:0.3s ease;
   border: 1px solid #fff;
 }
+.mainhero .row .img1 p{
+  font-size:13px;
+}
+.mainhero .row .img1 {
+margin-left:155px;
+}
+.mainhero .row .img img {
+  margin-left: -100px;
+  color: transparent;
+ }

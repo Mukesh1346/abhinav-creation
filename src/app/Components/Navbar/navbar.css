@@ -1,5 +1,72 @@
+/* Logo */
+.logo-img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Top navbar hidden on mobile */
+.top-navbar {
+  font-size: 0.9rem;
+  background: #f5f5f5;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #1891c8;
+  transition: width 0.3s ease;
+  
+}
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Menu */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-dropdown .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding-left: 1rem;
+  }
+
+  .dropdown-link {
+    padding: 5px 0;
+  }
+}
+
+/* Hover underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #1891c8;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown hover (desktop) */
 .fashion-dropdown {
-  background: #3acaff;
+  background: #ffffff;
   border-radius: 12px;
   position: absolute;
   top: 100%;
@@ -8,10 +75,11 @@
   display: none;
   z-index: 999;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
   width: 500px !important;
+  transition: all 0.3s ease;
 }
 
+/* Dropdown link */
 .dropdown-link {
   text-decoration: none;
   display: block;
@@ -20,33 +88,7 @@
   font-size: 0.95rem;
   transition: color 0.2s;
 }
-
 .dropdown-link:hover {
-  color: #e91e63;
+  /* color: #e91e63; */
   font-weight: 500;
-}
-
-.nav-hover {
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-hover::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #e91e63;
-  transition: width 0.3s ease;
-}
-
-.nav-hover:hover::after {
-  width: 100%;
-}
-
-/* Prevent clipping of dropdown */
-.navbar, .container {
-  overflow: visible !important;
 }

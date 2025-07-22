@@ -1,5 +1,5 @@
 .bgText {
-  font-size: 100px;
+  font-size: 125px;
   font-weight: 900;
   color: #e1dede;
   line-height: 0.85;
@@ -56,4 +56,20 @@
   color: rgb(46, 137, 202);
   font-size: 40px;
   font-weight: 600;
+}
+@media (max-width: 567px) {
+.one{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.overlayImg{
+  left:30%;
+  height:96%;
+
+}
+.HeaderRightSec{
+  margin-top:50px;
+}
 }

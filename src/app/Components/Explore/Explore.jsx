@@ -83,7 +83,7 @@ export default function Explore({count1=100,count2=200,duration=2000}) {
                     </div>
                 </div> */}
 
-                <div className="col-lg-6 col-md-6 col-12">
+                <div className="col-lg-6 col-md-6 col-12 mt-5">
           <div className="row g-2">
             {/* First Row */}
             <div className="col-6">
