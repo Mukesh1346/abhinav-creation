@@ -71,7 +71,7 @@ export default function Unique() {
           </motion.li>
         </motion.ul>
         <motion.button
-          className="explore-btn"
+          className="btn-custom w-100"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -57,6 +57,27 @@
   font-size: 40px;
   font-weight: 600;
 }
+
+
+
+.btn-custom {
+  color: #1891c8;
+  background-color: #fff;
+  border: 1px solid #1891c8;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .HeaderRightSec {
+    text-align: left;
+    height: 260px;
+    margin: 0 !important; /* optional: force override if necessary */
+    padding: 0;            /* optional: reset padding if required */
+  }
+}
+
+
+
 @media (max-width: 567px) {
 .one{
   display: flex;
@@ -69,7 +90,10 @@
   height:96%;
 
 }
-.HeaderRightSec{
-  margin-top:50px;
+.HeaderRightSec {
+  text-align: left;
+  height: 260px;
+  margin:0px;
 }
+
 }

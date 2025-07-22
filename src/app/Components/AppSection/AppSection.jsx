@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import laptop from '../../Images/video-sec.jpg';
+import laptop from '../../Images/asasas.png';
 import play1 from '../../Images/appstore.png';
 import play2 from '../../Images/googleplay.png';
 import '../Explore/explore.css';
@@ -19,11 +19,11 @@ export default function AppSection() {
             Stay connected anytime, anywhere with our mobile app. Enjoy seamless browsing, exclusive features, and instant updates — all at your fingertips. Download now and take your experience to the next level.
           </p>
           <div className="d-flex gap-3 mt-4 d-flex flex-wrap">
-                          <Image src={play1} alt="playstore Image" width={200}  />
-                          <Image src={play2} alt="app Image"  width={200}/>
+            <Image src={play1} alt="playstore Image" width={200} />
+            <Image src={play2} alt="app Image" width={200} />
 
           </div>
-           <button className="btn-custom mt-5 ">Download now</button>
+          <button className="btn-custom mt-5 ">Download now</button>
         </div>
       </div>
     </div>

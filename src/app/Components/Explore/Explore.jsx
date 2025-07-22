@@ -44,7 +44,7 @@ export default function Explore({count1=100,count2=200,duration=2000}) {
                         Located at Satyosham Garments, 9/7308 Guru Govind Singh Gali (Gandhinagar), near Surya Guest House, Anibhavi Creations brings you a wide range of wholesale jeans that are perfect for every fashion retailer across Pan India. Our collection is crafted with precision and care to meet the diverse needs of your customers.<br />
 
                         We understand that every customer deserves the best in both style and comfort. That’s why we offer premium wholesale jeans crafted with high-quality materials and expert craftsmanship. Whether you're shopping for your retail store or adding to your personal collection, our jeans deliver unmatched style, durability, and comfort. </p>
-                    <button className="btn-custom mt-2">Discover More</button>
+                    <button className="btn-custom discoverbtn mt-2">Discover More</button>
                 </div>
 
                 {/* <div className="col-lg-6 col-md-6 col-12">

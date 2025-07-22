@@ -27,6 +27,10 @@
 .nav-link:hover::after {
   width: 100%;
 }
+.insta-hover{
+  text-decoration: none;
+  color: #000;
+}
 
 /* Responsive Menu */
 @media (max-width: 991.98px) {

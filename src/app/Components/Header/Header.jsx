@@ -47,7 +47,7 @@ export default function Header() {
               </section>
               <div className="d-flex">
                 <input type="text" className="form-control w-25" placeholder="Write something..." />
-                <button className="btn btn-warning ms-3">Order Now</button>
+                <button className="btn-custom  ms-3">Order Now</button>
               </div>
 
               <div className="mt-4">

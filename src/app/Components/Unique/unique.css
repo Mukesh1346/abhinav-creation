@@ -15,7 +15,12 @@
       "large medium";
     gap: 20px;
   }
-  
+  .btn-custom {
+    color: #1891c8;
+    background-color: #fff;
+    border: 1px solid #1891c8;
+    padding: 10px 20px;
+  }
   .img-block {
     border-radius: 20px;
     overflow: hidden;
