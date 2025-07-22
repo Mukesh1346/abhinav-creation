@@ -22,8 +22,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj6/97FH4R/5mcr" crossOrigin="anonymous"/>
       <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  crossOrigin="anonymous"
+/>
+ <link
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
