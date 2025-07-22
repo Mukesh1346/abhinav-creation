@@ -82,3 +82,12 @@
     pointer-events: auto;
   }
   
+  @media (max-width: 768px){
+    .carousel-wrapper {
+      width: 100%;
+    }
+
+    .header a {
+      color: darkolivegreen;
+    }
+  }

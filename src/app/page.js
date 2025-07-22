@@ -18,8 +18,9 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <MainHero />
+      <Header />
       <Explore />
       <AppSection />
       {/* <QualitySection /> */}
