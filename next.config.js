@@ -1,7 +1,8 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   images: {
-    domains: ['i.imgur.com', 'comidasboricuas.com', 'placehold.co','media.istockphoto.com','cdn.dummyjson.com','limitededition.mx','images.squarespace-cdn.com'],
+    unoptimized: true, // disables sharp image optimization
   },
 };
+
+module.exports = nextConfig;

@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: 'Rohit Verma',
     title: 'Creative Director',
-    image: '/user4.jpeg',
+    image: '/user3.jpeg',
     message:
       'I’ve tried many brands, but the quality and comfort of these jeans stand out. Fast delivery and premium feel!',
   },

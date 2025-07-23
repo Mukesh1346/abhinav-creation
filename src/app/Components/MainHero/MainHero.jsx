@@ -1,7 +1,7 @@
 import React from 'react'
 import './MainHero.css'; // Assuming you have a CSS file for styling the main hero section
 import Image from 'next/image';
-import main from '../../Images/younghandsome.png'; // Adjust the path as necessary
+import main from '../../Images/main222.png'; // Adjust the path as necessary
 import logo from '../../Images/Group.png'; // Adjust the path as necessary
 
 

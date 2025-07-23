@@ -34,44 +34,41 @@ export default function Unique() {
     >
       <motion.div className="image-grid" variants={containerVariants}>
         <motion.div className="img-block large" variants={itemVariants}>
-          <Image src="/j6.jpg" alt="Main Design" width={400} height={430} />
+          <Image src="/j6.jpg" className='uniqueImg' alt="Main Design" width={400} height={430} />
         </motion.div>
 
         <motion.div className="img-block small" variants={itemVariants}>
-          <Image src="/j4.jpg" alt="Lamp Room" width={200} height={200} />
+          <Image src="/j4.jpg" alt="Lamp Room" className='uniqueImg' width={200} height={200} />
         </motion.div>
 
         <motion.div className="img-block medium" variants={itemVariants}>
-          <Image src="/j5.jpg" alt="Stool" width={250} height={250} />
+          <Image src="/j5.jpg" alt="Stool" className='uniqueImg' width={250} height={250} />
         </motion.div>
       </motion.div>
 
       <motion.div className="text-block" variants={containerVariants}>
-        <motion.h2 variants={itemVariants}>
+        <motion.h2 className='UniqueHeading' variants={itemVariants}>
           We Help You Make Modern Interior Design
         </motion.h2>
         <motion.p variants={itemVariants}>
-          Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
-          nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate
-          velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada.
+        Abhinavi Creator is a premium denim brand dedicated to crafting stylish, high-quality jeans for the modern generation. With a focus on comfort, durability, and cutting-edge design, we blend traditional craftsmanship with contemporary trends to deliver denim that fits every lifestyle. Whether you're dressing up or keeping it casual, Abhinavi Creator jeans are made to move with you — confidently and effortlessly.
         </motion.p>
         <motion.ul className="feature-list">
           <motion.li variants={itemVariants}>
-            Donec vitae odio quis nisl dapibus malesuada
+           stylish jeans for men who value comfort and confidence.
           </motion.li>
           <motion.li variants={itemVariants}>
-            Donec vitae odio quis nisl dapibus malesuada
+          Tailored fit jeans that bring comfort, class, and attitude.
           </motion.li>
           <motion.li variants={itemVariants}>
-            Donec vitae odio quis nisl dapibus malesuada
+          From work to weekend, jeans that never slow you down.
           </motion.li>
           <motion.li variants={itemVariants}>
-            Donec vitae odio quis nisl dapibus malesuada
+          Bold jeans designed for confident men who lead with style.
           </motion.li>
         </motion.ul>
         <motion.button
-          className="explore-btn"
+          className="btn-custom w-100"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

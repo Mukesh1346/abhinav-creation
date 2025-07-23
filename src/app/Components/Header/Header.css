@@ -7,6 +7,9 @@
   position: relative;
   animation: fadeInText 1s ease-in forwards;
 }
+.Header-main{
+  padding-top:20px ;
+}
 
 .overlayImg {
   position: absolute;
@@ -57,6 +60,36 @@
   font-size: 40px;
   font-weight: 600;
 }
+
+
+
+.btn-custom {
+  color: #1891c8;
+  background-color: #fff;
+  border: 1px solid #1891c8;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .HeaderRightSec {
+    text-align: left;
+    height: 260px;
+    margin: 0 !important; /* optional: force override if necessary */
+    padding: 0;            /* optional: reset padding if required */
+  }
+  .HeaderMainTitle {
+    line-height: 0.8;
+    font-size: 40px;
+    font-weight: 700;
+    margin:5px !important ;
+  }
+
+
+
+}
+
+
+
 @media (max-width: 567px) {
 .one{
   display: flex;
@@ -69,7 +102,10 @@
   height:96%;
 
 }
-.HeaderRightSec{
-  margin-top:50px;
+.HeaderRightSec {
+  text-align: left;
+  height: 260px;
+  margin:0px;
 }
+
 }

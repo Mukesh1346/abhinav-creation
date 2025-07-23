@@ -5,6 +5,9 @@ import gsap from 'gsap';
 import Link from 'next/link';
 import Image from 'next/image';
 import './navbar.css';
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Navbar() {
   const menuRef = useRef(null);
@@ -66,9 +69,9 @@ export default function Navbar() {
       {/* Top Navbar */}
       <div className="top-navbar d-none d-md-flex justify-content-start align-items-center px-4 py-2 glassmorph small">
         <div className="d-flex gap-4 align-items-center">
-          <span>📞 +91 9876543210</span>
-          <span>✉️ hello@example.com</span>
-          <Link href="#" className="insta-hover">📷 Instagram</Link>
+          <span><FaPhoneAlt  className='fs-5'/> +91 9876543210</span>
+          <span>< IoLogoYoutube  className='fs-5 text-danger' /> hello@example.com</span>
+          <Link href="#" className="insta-hover ">< FaInstagram className='fs-5 text-danger'/> Instagram</Link>
         </div>
       </div>
 
@@ -156,7 +159,7 @@ export default function Navbar() {
 
               {/* Contact */}
               <li className="nav-item">
-                <Link href="/contact" className="nav-link nav-hover" onClick={handleLinkClick}>
+                <Link href={`/Pages/About-us`} className="nav-link nav-hover" onClick={handleLinkClick}>
                   Contact
                 </Link>
               </li>

@@ -12,7 +12,7 @@ import './footer.css'; // Assuming you have a CSS file for styling the footer
 
 export default function Footer() {
   return (
-    <div className="container-fluid my-5 p-0">
+    <div className="container-fluid p-0">
       {/* Footer */}
       <footer className="text-center text-lg-start text-white" 
       // style={{ backgroundColor: '#2a2a2a' }}

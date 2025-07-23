@@ -128,6 +128,7 @@ import styles from './ProductPage.module.scss';
 import Image from 'next/image';
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const dummyProducts = [
   {
@@ -203,7 +204,8 @@ useEffect(()=>{
   return (
     <main className={styles.main}>
       <div className={styles.productsWrapper}>
-        {dummyProducts.map((product) => (
+        {dummyProducts.map((product , index) => (
+         <Link className='text-decoration-none' href={`Pages/product-details/${index}`} key={index}>
           <div key={product.id} className={styles.product}>
             <figure>
               <Image
@@ -220,13 +222,13 @@ useEffect(()=>{
                 <h1>{product.title}</h1>
                 <p>{product.desc}</p>
               </div>
-              <div className={styles.price}>{product.price}</div>
+              {/* <div className={styles.price}>{product.price}</div> */}
             </div>
 
             <div className={styles.productSidebar}>
               <button className={styles.buy}></button>
-              <button className={styles.infoBtn}><span>M</span></button>
-              <button className={styles.size}><span>SIZES</span></button>
+              <button className={styles.infoBtn}><span></span></button>
+              <button className={styles.size}><span></span></button>
               {/* <button className={styles.colors}>
                 <span>
                   <span className={`${styles.color} ${styles.black}`} role="button" />
@@ -236,6 +238,7 @@ useEffect(()=>{
               </button> */}
             </div>
           </div>
+         </Link>
         ))}
       </div>
     </main>

@@ -199,3 +199,10 @@
     line-height: 1.8;
   }
   
+
+@media (max-width: 768px){
+  .mainProductImage {
+  height: 250px;
+    width: 100%;
+  }
+}

@@ -12,7 +12,7 @@ export default function Discount() {
                             <p className='DiscountTitlePara2'>Grab 50% off annual Premium plan Get it now </p>
                         </div>
                            <div>
-                            <button className='btn btn-dark'>Get The Deal</button>
+                            <button className='btn-custom '>Get The Deal</button>
                            </div>
                     </div>
                 </div>

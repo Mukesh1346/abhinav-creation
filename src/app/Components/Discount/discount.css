@@ -10,7 +10,13 @@
 .DiscountTitlePara1{
     font-size: 20px;
     color:cornflowerblue;
-}
+}   
+.btn-custom {
+    color: #1891c8;
+    background-color: #fff;
+    border: 1px solid #1891c8;
+    padding: 10px 20px;
+  }
 
 @media (max-width: 768px) {
     .DiscountMainSec {

@@ -23,6 +23,7 @@ export default function Home() {
       <Header />
       <Explore />
       <AppSection />
+      <LatestProducts />
       {/* <QualitySection /> */}
       <ProductPage />
       <Discount />
