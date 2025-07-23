@@ -38,7 +38,7 @@ export default function Explore({count1=100,count2=200,duration=2000}) {
         <div className="container my-5">
             <div className="row align-items-center">
                 <div className="col-lg-6 col-md-6 col-12">
-                    <h1 className="mb-2" style={{ color: "#188fc7" }}>EXPLORE OUR PRODUCTS</h1>
+                    <h1 className="mb-2 ExploreSec" style={{ color: "#188fc7" }}>EXPLORE OUR PRODUCTS</h1>
                     <p>
                         At Anibhavi Creations, we pride ourselves on offering a wide range of high-quality, stylish jeans at wholesale prices across Pan India. Whether you're a retailer, distributor, or fashion enthusiast, our diverse collection ensures you'll find the perfect fit for every customer. <br />
                         Located at Satyosham Garments, 9/7308 Guru Govind Singh Gali (Gandhinagar), near Surya Guest House, Anibhavi Creations brings you a wide range of wholesale jeans that are perfect for every fashion retailer across Pan India. Our collection is crafted with precision and care to meet the diverse needs of your customers.<br />

@@ -61,25 +61,26 @@ const Page = () => {
         <div className="product-main">
           <div className="product-image">
             <div className="discount-badge">30%</div>
-            <Image src={ProductDetail.image} width={400} height={300} alt={ProductDetail.title} />
-            <div className="product-carousel">
+            <Image src={ProductDetail.image} width={370} height={300} alt={ProductDetail.title} />
+            {/* <div className="product-carousel">
               <span className="dot active"></span>
               <span className="dot"></span>
               <span className="dot"></span>
               <span className="dot"></span>
               <span className="dot"></span>
-            </div>
-            <div className="other-variations">
+            </div> */}
+            <div className="other-variations ms-5">
               <Image src="/j1.jpg" width={60} height={40} alt="Variation 1" />
               <Image src="/j2.jpg" width={60} height={40} alt="Variation 2" />
+              <Image src="/j3.jpg" width={60} height={40} alt="Variation 3" />
               <Image src="/j3.jpg" width={60} height={40} alt="Variation 3" />
             </div>
           </div>
 
-          <div className="product-details">
+          <div className="product-details p-5">
             <h1 className="product-title">{ProductDetail.title}</h1>
-            <span className="price-new">Price: ${ProductDetail.price}</span> <br />
-            <select className="form-control mt-3 w-25">
+            {/* <span className="price-new">Price: ${ProductDetail.price}</span> <br /> */}
+            <select className="form-control mt-3 w-50">
               <option>Available Sizes:</option>
               <option>Size 26</option>
               <option>Size 28</option>
@@ -87,26 +88,25 @@ const Page = () => {
               <option>Size 36</option>
             </select>
             <p className="product-desc">{ProductDetail.description}</p>
-            <div className="actions">
+            {/* <div className="actions">
               <button className="add-to-cart">ADD TO CART</button>
               <button className="add-to-wishlist" disabled>
                 ADD TO WISHLIST
               </button>
-            </div>
-            <div className="delivery-estimate">
+            </div> */}
+            {/* <div className="delivery-estimate">
               <strong>DELIVERY ESTIMATE</strong>
               <br />
               <small>Read our Terms and Conditions</small>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="product-tabs">
           <div className="tabs">
             <button className="tab active">DETAIL</button>
-            <button className="tab">SIZE DETAIL</button>
-            <button className="tab">RETURN POLICY</button>
-            <button className="tab">DELIVERY INFO</button>
+            {/* <button className="tab">SIZE DETAIL</button> */}
+            
           </div>
           <div className="tab-content">
             <div className="product-info">

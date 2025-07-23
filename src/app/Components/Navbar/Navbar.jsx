@@ -159,7 +159,7 @@ export default function Navbar() {
 
               {/* Contact */}
               <li className="nav-item">
-                <Link href="/contact" className="nav-link nav-hover" onClick={handleLinkClick}>
+                <Link href={`/Pages/About-us`} className="nav-link nav-hover" onClick={handleLinkClick}>
                   Contact
                 </Link>
               </li>

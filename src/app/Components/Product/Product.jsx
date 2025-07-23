@@ -10,16 +10,16 @@ export default function ProductDetailPage() {
   // const { id } = useParams(); 
   let [ProductDetail, setProductDetail] = useState([]);
 
-  function showProductData() {
-    axios.get("https://api.escuelajs.co/api/v1/products")
-      .then(res => {
-        console.log(res.data)
-        setProductDetail(res.data)
-      })
-      .catch(err => {
-        console.log("Error Fetching Products : ", err);
-      })
-  }
+  // function showProductData() {
+  //   axios.get("https://api.escuelajs.co/api/v1/products")
+  //     .then(res => {
+  //       console.log(res.data)
+  //       setProductDetail(res.data)
+  //     })
+  //     .catch(err => {
+  //       console.log("Error Fetching Products : ", err);
+  //     })
+  // }
   useEffect(() => {
     showProductData()
   }, [])
@@ -31,7 +31,7 @@ export default function ProductDetailPage() {
           <div className="product-main">
             <div className="product-image">
               <div className="discount-badge">30%</div>
-              <Image src="/p10.jpg" width={400} height={300} alt="Sneaker" />
+              <Image src="/p10.jpg"  className="mainProductImage" width={400} height={300} alt="Sneaker" />
               <div className="product-carousel">
                 <span className="dot active"></span>
                 <span className="dot"></span>

@@ -15,7 +15,7 @@ export default function Header() {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, ease: 'easeOut' }}
-      className="Header-main py-5"
+      className="Header-main "
     >
       <div className="container">
         <div className="row align-items-center">

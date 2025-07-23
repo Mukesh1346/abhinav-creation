@@ -16,4 +16,14 @@
   .discoverbtn{
       width:100%;
   }
+  .ExploreSec{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .ExploreSec p{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px 16px;
+  }
 }

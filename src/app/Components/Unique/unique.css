@@ -21,9 +21,13 @@
     border: 1px solid #1891c8;
     padding: 10px 20px;
   }
+ 
   .img-block {
-    border-radius: 20px;
+    /* border-radius: 10px; */
     overflow: hidden;
+  }
+  .uniqueImg{
+    border: 1px solid #1891c8;
   }
   
   .large {
@@ -46,7 +50,7 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #222;
+    /* color: #222; */
   }
   
   .text-block p {
@@ -109,12 +113,12 @@
   flex-wrap: wrap;
 }
 
-.text-block h2 {
+      /* {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #222;
-}
+  color:#1891c8 !important;
+} */
 
 .text-block p {
   font-size: 14px;

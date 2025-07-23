@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './LatestProducts.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const products = [
   { id: 1, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
@@ -13,6 +14,98 @@ const products = [
   { id: 7, name: 'Running shoes for men', price: 99, img: '/banner9.jpg' },
   { id: 8, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
 ];
+
+
+const dummyProducts = [
+  {
+    id: 0,
+    title: 'Classic T-Shirt',
+    description: 'High-quality cotton T-shirt with modern fit.',
+    price: 1029,
+    image: '/j1.jpg',
+  },
+  {
+    id: 1,
+    title: 'Summer Shirt',
+    description: 'Light and breezy for summer days.',
+    price: 945,
+    image: '/j2.jpg',
+  },
+  {
+    id: 2,
+    title: 'Denim Jacket',
+    description: 'Stylish and warm, perfect for any weather.',
+    price: 1289,
+    image: '/j4.jpg',
+  },
+  {
+    id: 3,
+    title: 'Hoodie',
+    description: 'Comfortable hoodie for casual wear.',
+    price: 1100,
+    image: '/j5.jpg',
+  },
+  {
+    id: 4,
+    title: 'Bomber Jacket',
+    description: 'Trendy bomber jacket for all seasons.',
+    price: 1499,
+    image: '/j6.jpg',
+  },
+  {
+    id: 5,
+    title: 'Classic T-Shirt',
+    description: 'High-quality cotton T-shirt with modern fit.',
+    price: 1029,
+    image: '/j1.jpg',
+  },
+  {
+    id: 6,
+    title: 'Summer Shirt',
+    description: 'Light and breezy for summer days.',
+    price: 945,
+    image: '/j2.jpg',
+  },
+  {
+    id: 7,
+    title: 'Denim Jacket',
+    description: 'Stylish and warm, perfect for any weather.',
+    price: 1289,
+    image: '/j4.jpg',
+  },
+  {
+    id: 8,
+    title: 'Hoodie',
+    description: 'Comfortable hoodie for casual wear.',
+    price: 1100,
+    image: '/j5.jpg',
+  },
+  {
+    id: 9,
+    title: 'Bomber Jacket',
+    description: 'Trendy bomber jacket for all seasons.',
+    price: 1499,
+    image: '/j6.jpg',
+  },
+  {
+    id: 10,
+    title: 'Bomber Jacket',
+    description: 'Trendy bomber jacket for all seasons.',
+    price: 1499,
+    image: '/j6.jpg',
+  },
+  {
+    id: 11,
+    title: 'Denim Jacket',
+    description: 'Stylish and warm, perfect for any weather.',
+    price: 1289,
+    image: '/j4.jpg',
+  },
+];
+
+
+
+
 
 export default function LatestProducts() {
   const CARD_WIDTH = 250 + 30; // 250px width + 30px gap
@@ -49,14 +142,19 @@ export default function LatestProducts() {
             transform: `translateX(-${offset}px)`,
           }}
         >
-          {duplicatedProducts.map((product, idx) => (
+          {dummyProducts.map((product, idx) => (
+           <div key={idx}>
+            <Link className='titleLatest'  href={`/Pages/product-details/${idx}`}>
             <div className="product-card" key={idx}>
-              <Image src={product.img} alt={product.name} width={250} height={250} />
-              <div className="product-info">
-                <span>{product.name}</span>
-                <strong>${product.price}</strong>
+              <Image src={product.image} alt={product.title} width={250} height={250} />
+              <div className="product-info align-items-center justify-content-center d-grid">
+                <span >{product.title}</span>
+                <span > Price : {product.price}</span>
+                {/* <strong>${product.description}</strong> */}
               </div>
-              <button className="add-to-cart">Add to Cart</button>
+              <button className="cartbtn">Add to Cart</button>
+            </div>
+          </Link>  
             </div>
           ))}
         </div>

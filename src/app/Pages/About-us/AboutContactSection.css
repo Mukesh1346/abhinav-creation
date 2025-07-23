@@ -1,0 +1,174 @@
+.ac-section {
+    /* background: linear-gradient(to bottom right,white, aliceblue); */
+  
+    color: rgb(0, 0, 0);
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .about-container{
+    
+      background: rgba(255, 254, 254, 0.6); /* transparent white */
+      border-radius: 16px;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2); /* soft border */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* optional shadow */
+   
+  }
+.ac-section{
+  background-image: url("/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+
+  .ac-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .ac-title {
+    text-align: center;
+    font-size: 48px;
+    color:  #1891c8;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .ac-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #000000;
+  }
+  
+  .ac-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  
+  .ac-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border:1px solid rgb(0, 0, 0);
+    width: 300px;
+    text-align: center;
+    transition: 0.3s ease;
+    /* border: 1px solid transparent; */
+  }
+
+  .ac-card h3{
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .ac-card:hover {
+    transform: scale(1.05);
+    border-color: #1891c8;
+    box-shadow: 0 0 10px  #1891c8;
+  }
+  
+  .ac-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .ac-contact-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .ac-subtitle {
+    font-size: 32px;
+    color:  #1891c8;
+    margin-bottom: 10px;
+  }
+  
+  .ac-contact-text {
+    color: #aaa8a8;
+    margin-bottom: 20px;
+  }
+  
+  .ac-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ac-input,
+  .ac-textarea {
+    padding: 12px 15px;
+    background:white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .ac-input:focus,
+  .ac-textarea:focus {
+    border-color:  #1891c8;
+    outline: none;
+  }
+  
+  .ac-button {
+    background:  #1891c8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .ac-button:hover {
+    background: #1891c8;
+  }
+  
+  .ac-contact-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .ac-image {
+    border-radius: 15px;
+    object-fit: cover;
+    width:100%;
+    /* height: auto; */
+  }
+  
+
+@media (max-width : 768px) {
+   
+  .ac-title {
+    margin-top:20px;
+    font-size: 25px;
+  }
+   
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

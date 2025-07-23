@@ -205,7 +205,7 @@ useEffect(()=>{
     <main className={styles.main}>
       <div className={styles.productsWrapper}>
         {dummyProducts.map((product , index) => (
-         <Link href={`Pages/product-details/${index}`} key={index}>
+         <Link className='text-decoration-none' href={`Pages/product-details/${index}`} key={index}>
           <div key={product.id} className={styles.product}>
             <figure>
               <Image

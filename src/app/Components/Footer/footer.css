@@ -6,3 +6,18 @@
     background-color: #1891c8;
     
 }
+@media (max-width: 768px) {
+    footer {
+      font-size: 12px; /* Adjust to your preference */
+    }
+  
+    footer h6 {
+      font-size: 12px; /* Heading font size on mobile */
+    }
+  
+    footer p,
+    footer a {
+      font-size: 12px;
+    }
+  }
+  
