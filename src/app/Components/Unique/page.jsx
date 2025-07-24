@@ -26,7 +26,9 @@ const itemVariants = {
 
 export default function Unique() {
   return (
-    <motion.div
+   <>
+   <section  id="Unique">
+   <motion.div
       className="hero-container"
       variants={containerVariants}
       initial="hidden"
@@ -77,5 +79,7 @@ export default function Unique() {
         </motion.button>
       </motion.div>
     </motion.div>
+   </section>
+   </>
   );
 }

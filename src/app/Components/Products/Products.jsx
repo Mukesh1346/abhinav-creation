@@ -134,35 +134,35 @@ const dummyProducts = [
   {
     id: 1,
     title: 'Classic T-Shirt',
-    desc: 'High-quality cotton T-shirt with modern fit.',
+    desc: 'High-quality cotton jeans',
     price: 1029,
     image: '/j1.jpg',
   },
   {
     id: 2,
     title: 'Summer Shirt',
-    desc: 'Light and breezy for summer days.',
+    desc: 'Light and breezy ',
     price: 945,
     image: '/j2.jpg',
   },
   {
     id: 3,
     title: 'Denim Jacket',
-    desc: 'Stylish and warm, perfect for any weather.',
+    desc: 'Stylish and warm',
     price: 1289,
     image:'/j4.jpg',
   },
   {
     id: 4,
     title: 'Denim Jacket',
-    desc: 'Stylish and warm, perfect for any weather.',
+    desc: ' perfect for all weather.',
     price: 1289,
     image:'/j5.jpg',
   },
   {
     id: 5,
     title: 'Denim Jacket',
-    desc: 'Stylish and warm, perfect for any weather.',
+    desc: 'Durable jeans with perfect size',
     price: 1289,
     image:'/j6.jpg',
   },
@@ -202,7 +202,8 @@ useEffect(()=>{
 
 
   return (
-    <main className={styles.main}>
+   <section id="Product">
+     <main className={styles.main}>
       <div className={styles.productsWrapper}>
         {dummyProducts.map((product , index) => (
          <Link className='text-decoration-none' href={`Pages/product-details/${index}`} key={index}>
@@ -242,5 +243,6 @@ useEffect(()=>{
         ))}
       </div>
     </main>
+   </section>
   );
 }

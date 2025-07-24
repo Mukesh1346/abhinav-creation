@@ -20,14 +20,14 @@ export default function Home() {
     <>
       
       <MainHero />
+      <LatestProducts />
       <Header />
       <Explore />
-      <AppSection />
-      <LatestProducts />
       {/* <QualitySection /> */}
-      <ProductPage />
       <Discount />
+      <ProductPage />
       <Unique />
+      <AppSection />
       <LatestProducts />
       <Testimonial />
     </>
