@@ -8,7 +8,9 @@ import '../Explore/explore.css';
 
 export default function AppSection() {
   return (
-    <div className="container my-5">
+   <>
+   <section id="AppSection">
+   <div className="container my-5">
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-6 col-12 mt-5">
           <Image src={laptop} alt="App Image" className="img-fluid" />
@@ -27,5 +29,8 @@ export default function AppSection() {
         </div>
       </div>
     </div>
+   </section>
+   
+   </>
   );
 }

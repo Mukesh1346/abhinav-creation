@@ -54,13 +54,13 @@ export default function Header() {
                 <b>www.anibhavicreations.com</b>
                 <div className="mt-2">
                   <Link href="https://www.instagram.com/anibhavicreations?igsh=MTVlNDVqcjB2bmtqeQ==">
-                    <Image src="/instagram.png" className="me-2" alt="insta" width={30} height={30} />
+                    <Image src="/instagram.png" className="me-4 mt-2" alt="insta" width={40} height={40} />
                   </Link>
-                  <Image src="/twitter.png" className="me-2" alt="twitter" width={30} height={30} />
+                  <Image src="/twitter.png" className="me-4 mt-2" alt="twitter" width={40} height={40} />
                   <Link href="https://m.youtube.com/@AnibhaviCreations">
-                    <Image src="/youtube.png" className="me-2" alt="Youtube" width={30} height={30} />
+                    <Image src="/youtube.png" className="me-4 mt-2" alt="Youtube" width={40} height={40} />
                   </Link>
-                  <Image src="/logo.png" className="me-2" alt="insta" width={40} height={30} />
+                  <Image src="/logo.png" className="me-4 mt-2" alt="insta" width={70} height={40} />
                 </div>
               </div>
             </div>

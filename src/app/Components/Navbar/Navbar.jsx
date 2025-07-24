@@ -15,6 +15,18 @@ export default function Navbar() {
   const [hasMounted, setHasMounted] = useState(false);
   let hideTimeout = null;
 
+  const product = [
+    {  id: 1 ,   list: 'Bootcut Jeans', href:'#Product'},
+    { id: 2 ,   list: 'Relaxed Fit Jeans', href:'#Testimonial'},
+    { id: 3 ,   list: 'Distressed Ripped Jeans', href:'#LatestProduct'},
+    { id: 4 ,   list: 'Straight Fit Jeans', href:'#Unique'},
+    { id: 5 ,   list: 'Slevedge Denim Jeans', href:'#AppSection'},
+    { id: 6 ,   list: 'Cargo Jeans', href:'#Product'},
+    { id: 7 ,   list: 'Bootcut Jeans', href:'#Product'},
+   
+  ]
+
+
   useEffect(() => {
     setHasMounted(true);
     gsap.fromTo(
@@ -69,9 +81,9 @@ export default function Navbar() {
       {/* Top Navbar */}
       <div className="top-navbar d-none d-md-flex justify-content-start align-items-center px-4 py-2 glassmorph small">
         <div className="d-flex gap-4 align-items-center">
-          <span><FaPhoneAlt  className='fs-5'/> +91 9876543210</span>
-          <span>< IoLogoYoutube  className='fs-5 text-danger' /> hello@example.com</span>
-          <Link href="#" className="insta-hover ">< FaInstagram className='fs-5 text-danger'/> Instagram</Link>
+          <span><FaPhoneAlt className='fs-5' /> +91 9876543210</span>
+          <span>< IoLogoYoutube className='fs-5 text-danger' /> hello@example.com</span>
+          <Link href="#" className="insta-hover ">< FaInstagram className='fs-5 text-danger' /> Instagram</Link>
         </div>
       </div>
 
@@ -81,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
         <div className="container">
 
           <button
@@ -95,17 +107,10 @@ export default function Navbar() {
           <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
             <ul className="navbar-nav mx-auto gap-lg-4 gap-2 text-center">
               {/* Static Links */}
-              {[
-                'Bootcut Jeans',
-                'Relaxed Fit Jeans',
-                'Distressed Ripped Jeans',
-                'Straight Fit Jeans',
-                'Slevedge Denim Jeans',
-                'Cargo Jeans'
-              ].map((text, index) => (
+              {product.map((item, index) => (
                 <li key={index} className="nav-item">
-                  <Link href="/" className="nav-link nav-hover" onClick={handleLinkClick}>
-                    {text}
+                  <Link href={item.href} className="nav-link nav-hover" onClick={handleLinkClick}>
+                    {item.list}
                   </Link>
                 </li>
               ))}

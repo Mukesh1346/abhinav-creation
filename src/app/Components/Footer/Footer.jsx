@@ -34,7 +34,7 @@ export default function Footer() {
 
               {/* Column 2 */}
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 className="text-uppercase mb-4 font-weight-bold roboto-text fs-5">Products</h6>
+                <h6 className="text-uppercase text-decoration-none mb-4 font-weight-bold roboto-text fs-5">Products</h6>
                 <p><Link href="#" className="text-white">Saree</Link></p>
                 <p><Link href="#" className="text-white">Lehenga</Link></p>
                 <p><Link href="#" className="text-white">Suit</Link></p>
@@ -54,7 +54,7 @@ export default function Footer() {
               </div>
 
               {/* Column 4 */}
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <div className="col-md-3 col-lg-2 col-xl-2  d-grid align-items-center justify-content-center mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold roboto-text fs-5">Follow us</h6>
 
                 {/* Social icons */}

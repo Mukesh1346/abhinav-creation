@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function Testimonial() {
   return (
-    <section className="testimonial-section">
+    <section  className="testimonial-section" id="Testimonial">
       <div className="overlay">
         <h2 className="testimonial-heading">What Our Customers Say</h2>
         <div className="testimonial-container">

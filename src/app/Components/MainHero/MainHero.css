@@ -10,6 +10,22 @@
     overflow:hidden;
 
 }
+
+.rotate-360 {
+  animation: rotate360 10s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 /* custom.css */
 .btn-custom {
   background-color: #fff;

@@ -5,6 +5,10 @@
   border: 1px solid #1891c8;
     padding: 10px 20px;
 }
+.ExploreSec{
+  font-weight: 700;
+}
+
 
 .btn-custom:hover {
   background-color: #0f6b96;

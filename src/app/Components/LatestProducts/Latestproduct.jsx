@@ -1,164 +1,171 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
-import './LatestProducts.css';
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import './LatestProducts.css';
 
-const products = [
-  { id: 1, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
-  { id: 2, name: 'Running shoes for men', price: 99, img: '/banner8.jpg' },
-  { id: 3, name: 'Running shoes for men', price: 99, img: '/banner9.jpg' },
-  { id: 4, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
-  { id: 5, name: 'Running shoes for men', price: 99, img: '/banner8.jpg' },
-  { id: 6, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
-  { id: 7, name: 'Running shoes for men', price: 99, img: '/banner9.jpg' },
-  { id: 8, name: 'Running shoes for men', price: 99, img: '/banner.jpg' },
-];
-
-
-const dummyProducts = [
-  {
-    id: 0,
-    title: 'Classic T-Shirt',
-    description: 'High-quality cotton T-shirt with modern fit.',
-    price: 1029,
-    image: '/j1.jpg',
-  },
+const jeansData = [
   {
     id: 1,
-    title: 'Summer Shirt',
-    description: 'Light and breezy for summer days.',
-    price: 945,
-    image: '/j2.jpg',
+    title: 'Classic Blue Jeans',
+    size: '32, 34, 36',
+    description: 'Timeless blue denim with a slim-fit cut.',
+    img: '/j1.jpg',
   },
   {
     id: 2,
-    title: 'Denim Jacket',
-    description: 'Stylish and warm, perfect for any weather.',
-    price: 1289,
-    image: '/j4.jpg',
+    title: 'Ripped Street Style',
+    size: '30, 32, 34',
+    description: 'Trendy ripped jeans for an edgy look.',
+    img: '/j6.jpg',
   },
   {
     id: 3,
-    title: 'Hoodie',
-    description: 'Comfortable hoodie for casual wear.',
-    price: 1100,
-    image: '/j5.jpg',
+    title: 'Black Slim Jeans',
+    size: '32, 34, 36, 38',
+    description: 'Stylish black jeans perfect for night outs.',
+    img: '/j3.jpg',
   },
   {
     id: 4,
-    title: 'Bomber Jacket',
-    description: 'Trendy bomber jacket for all seasons.',
-    price: 1499,
-    image: '/j6.jpg',
+    title: 'Vintage Wash Jeans',
+    size: '30, 32, 34',
+    description: 'Retro faded wash with a comfy fit.',
+    img: '/j3.jpg',
   },
   {
     id: 5,
-    title: 'Classic T-Shirt',
-    description: 'High-quality cotton T-shirt with modern fit.',
-    price: 1029,
-    image: '/j1.jpg',
+    title: 'Skinny Fit Denim',
+    size: '28, 30, 32',
+    description: 'Stretchy skinny fit for modern fashion.',
+    img: '/j4.jpg',
   },
   {
     id: 6,
-    title: 'Summer Shirt',
-    description: 'Light and breezy for summer days.',
-    price: 945,
-    image: '/j2.jpg',
-  },
-  {
-    id: 7,
-    title: 'Denim Jacket',
-    description: 'Stylish and warm, perfect for any weather.',
-    price: 1289,
-    image: '/j4.jpg',
-  },
-  {
-    id: 8,
-    title: 'Hoodie',
-    description: 'Comfortable hoodie for casual wear.',
-    price: 1100,
-    image: '/j5.jpg',
-  },
-  {
-    id: 9,
-    title: 'Bomber Jacket',
-    description: 'Trendy bomber jacket for all seasons.',
-    price: 1499,
-    image: '/j6.jpg',
-  },
-  {
-    id: 10,
-    title: 'Bomber Jacket',
-    description: 'Trendy bomber jacket for all seasons.',
-    price: 1499,
-    image: '/j6.jpg',
-  },
-  {
-    id: 11,
-    title: 'Denim Jacket',
-    description: 'Stylish and warm, perfect for any weather.',
-    price: 1289,
-    image: '/j4.jpg',
+    title: 'Regular Fit Jeans',
+    size: '32, 34, 36, 38, 40',
+    description: 'Everyday jeans with regular fit comfort.',
+    img: '/j5.jpg',
   },
 ];
 
-
-
-
-
 export default function LatestProducts() {
-  const CARD_WIDTH = 250 + 30; // 250px width + 30px gap
-  const VISIBLE_CARDS = 5;
   const [offset, setOffset] = useState(0);
-
-  const totalCards = products.length;
-  const duplicatedProducts = [...products, ...products]; // for smooth loop
+  const [cardWidth, setCardWidth] = useState(250);
+  const [visibleCards, setVisibleCards] = useState(4);
+  const carouselRef = useRef(null);
+  const autoScrollRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setOffset((prevOffset) => {
-        const maxOffset = CARD_WIDTH * (totalCards);
-        const nextOffset = prevOffset + CARD_WIDTH;
-        return nextOffset >= maxOffset ? 0 : nextOffset;
-      });
-    }, 2500);
+    const updateLayout = () => {
+      const screenWidth = window.innerWidth;
+      const gap = 20;
 
-    return () => clearInterval(interval);
+      if (screenWidth <= 576) {
+        setCardWidth((screenWidth - 40 - gap) / 2); // 2 cards on mobile
+        setVisibleCards(2);
+      } else if (screenWidth <= 768) {
+        setCardWidth(220);
+        setVisibleCards(3);
+      } else if (screenWidth <= 1024) {
+        setCardWidth(230);
+        setVisibleCards(4);
+      } else {
+        setCardWidth(250);
+        setVisibleCards(5);
+      }
+    };
+
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
   }, []);
 
+  useEffect(() => {
+    const scrollCarousel = () => {
+      setOffset(prev => {
+        const maxOffset = (cardWidth + 20) * (jeansData.length - visibleCards);
+        const nextOffset = prev + (cardWidth + 20);
+        return nextOffset > maxOffset ? 0 : nextOffset;
+      });
+    };
+
+    autoScrollRef.current = setInterval(scrollCarousel, 3000);
+    return () => clearInterval(autoScrollRef.current);
+  }, [cardWidth, visibleCards]);
+
+  const nextSlide = () => {
+    const maxOffset = (cardWidth + 20) * (jeansData.length - visibleCards);
+    setOffset(prev => Math.min(prev + (cardWidth + 20), maxOffset));
+    resetAutoScroll();
+  };
+
+  const prevSlide = () => {
+    setOffset(prev => Math.max(prev - (cardWidth + 20), 0));
+    resetAutoScroll();
+  };
+
+  const resetAutoScroll = () => {
+    clearInterval(autoScrollRef.current);
+    autoScrollRef.current = setInterval(() => {
+      setOffset(prev => {
+        const maxOffset = (cardWidth + 20) * (jeansData.length - visibleCards);
+        const nextOffset = prev + (cardWidth + 20);
+        return nextOffset > maxOffset ? 0 : nextOffset;
+      });
+    }, 3000);
+  };
+
   return (
-    <div className="latest-products-container">
-      <div className="header">
-       <div className='text-center'> 
-       <h2 >LATEST PRODUCTS</h2>
-       </div>
-        <a href="#">VIEW ALL</a>
-      </div>
-      <div className="carousel-wrapper">
-        <div
-          className="carousel"
-          style={{
-            transform: `translateX(-${offset}px)`,
-          }}
-        >
-          {dummyProducts.map((product, idx) => (
-           <div key={idx}>
-            <Link className='titleLatest'  href={`/Pages/product-details/${idx}`}>
-            <div className="product-card" key={idx}>
-              <Image src={product.image} alt={product.title} width={250} height={250} />
-              <div className="product-info align-items-center justify-content-center d-grid">
-                <span >{product.title}</span>
-                <span > Price : {product.price}</span>
-                {/* <strong>${product.description}</strong> */}
+    <section className="latest-products">
+      <div className="LatestContainer">
+        <div className="section-header">
+          <h2>Latest Jeans Collection</h2>
+          <Link href="/products" className="view-all">
+            View All <span>→</span>
+          </Link>
+        </div>
+
+        <div className="carousel-container" ref={carouselRef}>
+          <div
+            className="product-carousel"
+            style={{
+              transform: `translateX(-${offset}px)`,
+              transition: 'transform 0.5s ease',
+            }}
+          >
+            {jeansData.map(product => (
+              <div
+                key={product.id}
+                className="product-card"
+                style={{ width: `${cardWidth}px` }}
+              >
+                <div className="product-inner">
+                  <Link href={`/products/${product.id}`} className="product-link">
+                    <div className="image-wrapper">
+                      <Image
+                        src={product.img}
+                        alt={product.title}
+                        width={cardWidth}
+                        height={300}
+                        className="product-image"
+                      />
+                    </div>
+                    <div className="product-details">
+                      <h3>{product.title}</h3>
+                      <p className="description">{product.description}</p>
+                      {/* <p className="size"><strong>Size:</strong> {product.size}</p> */}
+                    </div>
+                  </Link>
+                </div>
               </div>
-              <button className="cartbtn">Add to Cart</button>
-            </div>
-          </Link>  
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <button className="carousel-nav prev" onClick={prevSlide}>‹</button>
+          <button className="carousel-nav next" onClick={nextSlide}>›</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

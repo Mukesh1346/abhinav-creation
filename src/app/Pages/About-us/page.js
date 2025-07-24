@@ -39,7 +39,7 @@ export default function AboutContactSection() {
         <div className="ac-contact">
           <div className="ac-contact-left">
             <h3 className="ac-subtitle text-center"> Contact Us</h3>
-            <p className="ac-contact-text text-center">Want to collaborate or just say hey? We'd love to hear from you.</p>
+            <p className="ac-contact-text text-center">Want to collaborate or just say hey? We d love to hear from you.</p>
             <form className="ac-form">
               <input type="text" placeholder="Your Name" className="ac-input" />
               <input type="email" placeholder="Email Address" className="ac-input" />
